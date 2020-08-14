@@ -1,0 +1,19 @@
+/* font-family: 'Henny Penny', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Griffy', cursive;
+font-family: 'Spicy Rice', cursive; */
+
+h1 {
+  font-family: 'Spicy Rice', cursive;
+  font-size: 70px;
+}
+
+h2 {
+  font-family: 'Griffy', cursive;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 25px;
+  margin: 25px;
+}
