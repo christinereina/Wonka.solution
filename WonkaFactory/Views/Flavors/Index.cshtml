@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models;
+@model List<Factory.Models.Flavor>;
+
+<h1>Choose your desired Flavor</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>We are currently restocking our flavors. Come back soon!</h3>
+} 
+
+
+
+@Html.ActionLink("Add a Flavor", "Create")<br>
+@Html.ActionLink("Home", "Index", "Home")<br>
