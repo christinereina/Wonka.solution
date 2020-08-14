@@ -65,24 +65,6 @@ namespace Factory.Controllers
       return RedirectToAction("Index");
     }
 
-    // public ActionResult AddRecipe(int id)
-    // {
-    //   var thisCategory = _db.Categories.FirstOrDefault(categories => categories.CategoryId == id);
-    //   ViewBag.RecipeId = new SelectList(_db.Recipes, "RecipeId", "Description");
-    //   return View(thisCategory);
-    // }
-
-    // [HttpPost]
-    // public ActionResult AddRecipe(Category category, int RecipeId)
-    // {
-    //   if (RecipeId != 0)
-    //   {
-    //     _db.CategoryRecipe.Add(new CategoryRecipe() { RecipeId = RecipeId, CategoryId = category.CategoryId });
-    //   }
-    //   _db.SaveChanges();
-    //   return RedirectToAction("Index");
-    // }
-
     public ActionResult Delete(int id)
     {
       var thisFlavor  = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
@@ -99,10 +81,28 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult DeleteRecipe(int joinId)
+    public ActionResult DeleteTreat(int joinId)
     {
       var joinEntry = _db.FlavorTreat.FirstOrDefault(entry => entry.FlavorTreatId == joinId);
       _db.FlavorTreat.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult AddTreat(int id)
+    {
+      var thisFlavor = _db.Flavors.FirstOrDefault(flavors => flavors.FlavorId == id);
+      ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Description");
+      return View(thisFlavor);
+    }
+
+    [HttpPost]
+    public ActionResult AddTreat(Flavor flavor, int TreatId)
+    {
+      if (TreatId != 0)
+      {
+        _db.FlavorTreat.Add(new FlavorTreat() { TreatId = TreatId, FlavorId = flavor.FlavorId });
+      }
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

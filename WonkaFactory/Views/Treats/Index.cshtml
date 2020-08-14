@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models;
+@model IEnumerable<Factory.Models.Treat>
+
+<h1>Treats for @User.Identity.Name</h1>
+
+@if (Model.Any())
+{
+    @foreach (Treat treat in Model)
+    {
+      <p><h3>@Html.ActionLink($"{treat.Description}", "Details", new { id = treat.TreatId })</h3></p>
+    }
+} 
+else
+{
+  <h3>No Treats!</h3>
+}
+
+<p>@Html.ActionLink("Add New Treat", "Create")</p>
+<p>@Html.ActionLink("See all Flavors", "Index", "Flavors")</p>
+<p>@Html.ActionLink("See all Treats", "Index", "Treats")</p>
