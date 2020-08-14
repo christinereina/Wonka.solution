@@ -10,6 +10,13 @@
 
 ## Description
 
+Welcome to Willy Wonka's Chocolate Factory...soon to be Christine's Chocolate Factory!
+
+The Chocolate Factory will require user authentication. Customers should be able to log in and log out. Only logged in Customers will have the ability to create, update and delete an order functionality. 
+
+All Customers should be able to have read functionality.This project will contain a many-to-many relationship between Treats and Flavors. A treat can have many flavors (such as sweet, savory, spicy, or creamy) and a flavor can have many treats. For instance, the "sweet" flavor could include Scrumdidilyumptious Bar, Sizzler, a Triple Cream Cup, and so on. 
+
+Once logged in the customer should be able to navigate to a splash page that lists all treats and flavors. Customers should be able to click on an individual treat or flavor to see all the treats/flavors that belong to it.
 
 
 ## Setup/Installation Requirements 
