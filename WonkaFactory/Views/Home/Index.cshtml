@@ -2,14 +2,44 @@
 @{
   Layout = "_Layout";
 }
-<h1>Christine's Chocolate & Sweets Factory</h1> 
-<div class="card mb-3">
-  <img class="card-img-top" src="~/img/yellow.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div class="header">
+  <h1>Christine's</h1>
+  <img src="~/img/cookie.png" class="center">
+  <h1>Chocolate & Sweets Factory</h1> 
+</div>
+
+<div class="header2">
+  <h1>CHOOSE YOUR PLAN</h1>
+  <h2>Choose the plan you like the most, place your order, and your first Japanese candy box will ship in a few days!</h2>
+</div>
+
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="~/img/candy.png" alt="Card image cap">
+    <div class="card-body">
+      <h2 class="card-title">Chocolate Lover's Box</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="~/img/box2.png" alt="Card image cap">
+    <div class="card-body">
+      <h2 class="card-title">Umami Me Box</h2>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+  <img class="card-img-top" src="~/img/box.png" alt="Card image cap">
+    <div class="card-body">
+      <h2 class="card-title">The Everything Box</h2>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
   </div>
 </div>
 
-<button type="button" class="btn btn-light">@Html.ActionLink("Enter", "Index", "Account")</button>
+<div class="center">
+  <button type="button" class="btn btn-light">@Html.ActionLink("Get It Now", "Index", "Account")</button>
+</div>

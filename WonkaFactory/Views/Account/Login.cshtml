@@ -9,15 +9,15 @@
 <h1>Log in with your account</h1>
 <hr />
 
-<div class="card">
+<div class="card center">
   <div class="card-body">
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(m => m.Email)<br>
-  @Html.TextBoxFor(m => m.Email)<br>
+  @Html.LabelFor(m => m.Email)
+  <p>@Html.TextBoxFor(m => m.Email)</p>
 
-  @Html.LabelFor(m => m.Password)<br>
-  @Html.PasswordFor(m => m.Password)<br>
+  @Html.LabelFor(m => m.Password)
+  <p>@Html.PasswordFor(m => m.Password)</p>
 
   <input type="submit" value="Log in" class="btn btn-success" />
 }
