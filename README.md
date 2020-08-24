@@ -10,7 +10,7 @@
 
 ## Description
 
-Welcome to what was formerly known as Willy Wonka's Chocolate Factory...soon to be Christine's Chocolate Factory!
+Welcome to what was formerly known as Willy Wonka's Chocolate Factory...soon to be Christine's Chocolate Factory! Christine will be doing a **pre-order** soft launch which will allow the customers to place their orders now!
 
 ---
 
@@ -48,10 +48,19 @@ dotnet build
 dotnet run
 ```
 ### 4. Create the database and project tables
+
+Navigate to the `appsettings.json` file and replace "DATABASE_NAME" with the name of your database, and "YOUR_PASSWORD_HERE" with the the password you use for SQL 
+
 ```
-dotnet ef migrations add Initial
-dotnet ef database update
+{
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=DATABASE_NAME;uid=root;pwd=YOUR_PASSWORD_HERE;"
+  }
+}
 ```
+
+Run **dotnet ef database update** in your root directory to create your database.
+
 ### 5. Starting the Server
 
 Initialize a local server to run the project in your browser
@@ -59,7 +68,7 @@ Initialize a local server to run the project in your browser
 dotnet watch run
 ```
 
-If you are running the script locally, it will open the project in your browser window and shift the focus from the terminal to the browser. If not, you can copy and paste this address to view
+If you are running the script locally, it will open the project in your browser window and shift the focus from the terminal to the browser. If not, you can copy and paste this address to view:
 
 ```
 http://127.0.0.1:5000
@@ -68,7 +77,7 @@ http://127.0.0.1:5000
 
 ## Known Bugs
 
-N/A as of 8.17.2020
+Program does not have the ability to add preset prices for customized treat (8.17.2020)
 
 ## Support and contact details
 
@@ -87,9 +96,10 @@ Please feel free to contact the author through GitHub **[christinereina](https:/
 * Visual Studio Code
 * Git Version Control 
 * GitHub
+* [Unsplash](https://unsplash.com/) for project images
 
 ### License
 
-This site is licensed under the [MIT](https://mit-license.org/) license.
+[MIT](https://mit-license.org/)
 
 Copyright (c) 2020 **Christine Augustine**
